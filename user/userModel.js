@@ -25,6 +25,11 @@ const UserSchema = new mongoose.Schema({
     max: 20,
     min: 4,
   },
+  gender: {
+    type: String,
+    required: true,
+    default: 'non-binary',
+  },
   shoppingList: {
     type: Array,
     default: [],
