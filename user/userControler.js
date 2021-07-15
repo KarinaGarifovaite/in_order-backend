@@ -46,6 +46,7 @@ const login = async (req, res) => {
     user.sessionToken.push({ token });
     await user.save();
     // Send response with token in headers
+    res.json({ success: true, msg: 'Logged in', token: token });
     res.header('in_order-token', token).json(user);
   } catch (err) {
     console.log(err);
