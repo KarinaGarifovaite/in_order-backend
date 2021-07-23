@@ -18,6 +18,7 @@ router.delete(
   UserMiddleware.authenticate,
   UserController.deleteAccount
 );
+router.get('/allUsers', UserController.getAllUsers);
 
 // Export
 module.exports = router;

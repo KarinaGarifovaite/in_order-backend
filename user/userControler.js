@@ -114,6 +114,15 @@ const deleteAccount = async (req, res) => {
   }
 };
 
+const getAllUsers = async (req, res) => {
+  try {
+    let allUsers = await User.find({});
+    res.json(allUsers);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+};
+
 module.exports = {
   signUp,
   login,
@@ -121,4 +130,5 @@ module.exports = {
   getUserInfo,
   deleteAccount,
   editUser,
+  getAllUsers,
 };
