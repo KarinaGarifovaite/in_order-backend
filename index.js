@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 require('dotenv').config();
 
-const app = express();
 const PORT = process.env.PORT || 5000;
+const app = express();
 
 const corsOptions = { exposedHeaders: ['in_order-token'] };
 
