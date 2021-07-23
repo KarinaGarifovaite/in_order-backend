@@ -13,8 +13,8 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use('/', routes);
 
-const DB_URI =
-  'mongodb+srv://karina:labas123@cluster0.kqcz7.mongodb.net/in_order?retryWrites=true&w=majority';
+const DB_URI = process.env.DB_CLUSTER;
+
 //Database
 mongoose
   .connect(DB_URI, {
